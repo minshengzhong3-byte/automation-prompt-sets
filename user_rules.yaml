@@ -1,0 +1,297 @@
+# ========================
+# USER RULES - 核心配置
+# ========================
+# 此文件定义提示词采集和身份切换的核心规则
+
+# 1. 系统基础配置
+system:
+  version: "1.0"
+  priority: "highest"
+  target_file: ".trae/rules/project_rules.md"
+
+# 2. 提示词采集规则
+prompt_collection:
+  # 采集触发条件
+  triggers:
+    - "stage_change"
+    - "identity_switch"
+    - "manual_request"
+  
+  # 采集目标目录
+  target_directories:
+    - ".trae/rules/prompt_sets/core/"
+    - ".trae/rules/prompt_sets/identities/"
+    - ".trae/rules/prompt_sets/code_analysis/"
+    - ".trae/rules/prompt_sets/program_development/"
+    - ".trae/rules/prompt_sets/web_development/"
+    - ".trae/rules/prompt_sets/tool_development/"
+    - ".trae/rules/prompt_sets/static_review/"
+    - ".trae/rules/prompt_sets/pattern_matching/"
+    - ".trae/rules/prompt_sets/reverse_engineering/"
+    - ".trae/rules/prompt_sets/general_research/"
+  
+  # 采集优先级
+  priority_order:
+    - "core"
+    - "current_identity"
+    - "current_stage"
+    - "development_type"
+    - "research_type"
+
+  # 开发类型定义
+  development_types:
+    program_development:
+      description: "程序开发 - 通用软件开发项目"
+      stages: ["requirements_analysis", "planning", "development", "testing"]
+      default_identity: "developer"
+      
+    web_development:
+      description: "网站开发 - Web应用和网站建设"
+      stages: ["requirements_analysis", "planning", "development", "testing"]
+      default_identity: "developer"
+      
+    tool_development:
+      description: "工具开发 - 开发工具和实用程序"
+      stages: ["requirements_analysis", "planning", "development", "testing"]
+      default_identity: "developer"
+      
+    reverse_engineering:
+      description: "逆向工程 - 程序逆向分析和安全研究"
+      stages: ["binary_analysis", "disassembly", "protocol_analysis", "vulnerability_analysis", "report_generation"]
+      default_identity: "reverse_engineer"
+
+  # 阶段定义
+  stages:
+    requirements_analysis:
+      description: "需求分析阶段 - 收集和分析项目需求"
+      target_identity: "architect"
+      prompt_files: ["requirements_analysis.md"]
+      
+    planning:
+      description: "计划阶段 - 制定项目计划和架构设计"
+      target_identity: "architect"
+      prompt_files: ["planning.md"]
+      
+    development:
+      description: "开发阶段 - 编写和实现代码"
+      target_identity: "developer"
+      prompt_files: ["development.md"]
+      
+    testing:
+      description: "测试阶段 - 验证代码功能和性能"
+      target_identity: "qa_tester"
+      prompt_files: ["testing.md"]
+      
+    binary_analysis:
+      description: "二进制分析阶段 - 分析可执行文件结构"
+      target_identity: "reverse_engineer"
+      prompt_files: ["binary_analysis.md"]
+      
+    disassembly:
+      description: "反汇编阶段 - 将机器码转换为汇编代码"
+      target_identity: "reverse_engineer"
+      prompt_files: ["disassembly_techniques.md"]
+      
+    protocol_analysis:
+      description: "协议分析阶段 - 逆向分析网络协议"
+      target_identity: "reverse_engineer"
+      prompt_files: ["protocol_analysis.md"]
+      
+    vulnerability_analysis:
+      description: "漏洞分析阶段 - 识别安全漏洞"
+      target_identity: "reverse_engineer"
+      prompt_files: ["vulnerability_analysis.md"]
+      
+    report_generation:
+      description: "报告生成阶段 - 生成逆向分析报告"
+      target_identity: "reverse_engineer"
+      prompt_files: ["framework.md"]
+
+# 3. 身份管理规则
+identity_management:
+  # 身份定义
+  identities:
+    code_analyst:
+      description: "代码分析师 - 分析代码结构和逻辑"
+      prompt_path: ".trae/rules/prompt_sets/identities/code_analyst.md"
+    
+    architect:
+      description: "架构师 - 设计解决方案和架构"
+      prompt_path: ".trae/rules/prompt_sets/identities/architect.md"
+    
+    code_reviewer:
+      description: "代码审查员 - 执行代码审查和静态分析"
+      prompt_path: ".trae/rules/prompt_sets/identities/code_reviewer.md"
+    
+    developer:
+      description: "开发者 - 编写和修改代码"
+      prompt_path: ".trae/rules/prompt_sets/identities/developer.md"
+    
+    qa_tester:
+      description: "测试员 - 验证代码功能和稳定性"
+      prompt_path: ".trae/rules/prompt_sets/identities/qa_tester.md"
+    
+    reverse_engineer:
+      description: "逆向工程师 - 执行程序逆向分析和安全研究"
+      prompt_path: ".trae/rules/prompt_sets/identities/reverse_engineer.md"
+
+# 4. project_rules.md 更新规则
+project_rules_update:
+  # 更新触发条件
+  update_triggers:
+    - "prompt_collection_completed"
+    - "identity_switch_completed"
+    - "development_type_change"
+    - "stage_change"
+  
+  # 更新内容
+  update_content:
+    - "current_identity: <identity_name>"
+    - "collected_prompts: <prompt_list>"
+    - "available_identities: [<identity_list>]"
+    - "current_development_type: <development_type>"
+    - "current_stage: <stage>"
+    - "available_stages: [<stage_list>]"
+  
+  # 更新策略
+  update_strategy:
+    merge_strategy: "intelligent_merge"
+    conflict_resolution: "priority_based"
+    preserve_context: true
+
+# 5. IDE自动化编程配置
+ide_automation:
+  # 开发环境配置
+  development_environment:
+    code_generation: true
+    auto_completion: true
+    real_time_validation: true
+    debugging_integration: true
+    
+  # 测试环境配置  
+  testing_environment:
+    test_generation: true
+    test_execution: true
+    coverage_analysis: true
+    performance_monitoring: true
+    
+  # 部署配置
+  deployment_config:
+    build_automation: true
+    dependency_management: true
+    containerization: true
+    cloud_integration: true
+
+# 6. GitHub提示词集自动拉取规则
+git_prompt_collection:
+  # GitHub仓库配置
+  github_repository:
+    owner: "minshengzhong3-byte"
+    repo: "automated-prompt-sets"
+    branch: "main"
+    base_url: "https://raw.githubusercontent.com/minshengzhong3-byte/automated-prompt-sets/main"
+  
+  # 拉取触发条件
+  pull_triggers:
+    - "project_initialization"
+    - "stage_change"
+    - "development_type_change"
+    - "manual_sync_request"
+    - "prompt_file_not_found"
+  
+  # 拉取目标目录映射
+  target_mapping:
+    - github_path: "prompt_sets/core/"
+      local_path: ".trae/rules/prompt_sets/core/"
+      priority: "highest"
+    - github_path: "prompt_sets/identities/"
+      local_path: ".trae/rules/prompt_sets/identities/"
+      priority: "high"
+    - github_path: "prompt_sets/code_analysis/"
+      local_path: ".trae/rules/prompt_sets/code_analysis/"
+      priority: "medium"
+    - github_path: "prompt_sets/program_development/"
+      local_path: ".trae/rules/prompt_sets/program_development/"
+      priority: "medium"
+    - github_path: "prompt_sets/web_development/"
+      local_path: ".trae/rules/prompt_sets/web_development/"
+      priority: "medium"
+    - github_path: "prompt_sets/tool_development/"
+      local_path: ".trae/rules/prompt_sets/tool_development/"
+      priority: "medium"
+    - github_path: "prompt_sets/static_review/"
+      local_path: ".trae/rules/prompt_sets/static_review/"
+      priority: "medium"
+    - github_path: "prompt_sets/pattern_matching/"
+      local_path: ".trae/rules/prompt_sets/pattern_matching/"
+      priority: "medium"
+    - github_path: "prompt_sets/reverse_engineering/"
+      local_path: ".trae/rules/prompt_sets/reverse_engineering/"
+      priority: "medium"
+    - github_path: "prompt_sets/general_research/"
+      local_path: ".trae/rules/prompt_sets/general_research/"
+      priority: "medium"
+  
+  # 拉取策略
+  pull_strategy:
+    method: "git_clone_or_pull"
+    fallback_method: "curl_download"
+    retry_count: 3
+    timeout_seconds: 30
+    preserve_local_changes: false
+    conflict_resolution: "github_wins"
+  
+  # 文件过滤规则
+  file_filters:
+    include_patterns:
+      - "*.md"
+      - "*.yaml"
+      - "*.yml"
+      - "framework.md"
+      - "config.yaml"
+    exclude_patterns:
+      - "*.tmp"
+      - "*.bak"
+      - "*.log"
+      - "node_modules/"
+      - ".git/"
+  
+  # 验证和完整性检查
+  validation:
+    checksum_verification: true
+    file_size_validation: true
+    required_files:
+      - "framework.md"
+      - "config.yaml"
+    min_file_count: 5
+  
+  # 状态监控和日志
+  monitoring:
+    log_level: "info"
+    success_notification: true
+    error_notification: true
+    last_sync_timestamp: true
+    sync_statistics: true
+
+# 7. 开发规范和流程
+development_standards:
+  # 代码规范
+  code_standards:
+    naming_conventions: true
+    code_formatting: true
+    documentation_requirements: true
+    error_handling: true
+    
+  # 开发流程
+  development_process:
+    version_control: true
+    code_review: true
+    continuous_integration: true
+    automated_testing: true
+    
+  # 质量保障
+  quality_assurance:
+    static_analysis: true
+    security_scanning: true
+    performance_testing: true
+    accessibility_testing: true

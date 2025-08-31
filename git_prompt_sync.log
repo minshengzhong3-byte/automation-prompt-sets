@@ -1,0 +1,4 @@
+2025-08-31 09:07:09,453 - git_prompt_sync - ERROR - º”‘ÿ≈‰÷√Œƒº˛ ß∞‹: while scanning a double-quoted scalar
+  in "C:\Users\ADMINI~1\AppData\Local\Temp\tmpz20leqgi.yaml", line 9, column 19
+expected escape sequence of 8 hexadecimal numbers, but found 's'
+  in "C:\Users\ADMINI~1\AppData\Local\Temp\tmpz20leqgi.yaml", line 9, column 24

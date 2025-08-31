@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "analysis_type": "逆向工程分析",
+    "target": "sample.exe",
+    "duration": "45分钟",
+    "confidence": "85%"
+  },
+  "findings": [
+    {
+      "category": "网络通信",
+      "finding": "程序包含HTTP客户端功能",
+      "severity": "信息",
+      "details": "发现与example.com的通信"
+    },
+    {
+      "category": "持久化",
+      "finding": "注册表启动项修改",
+      "severity": "警告",
+      "details": "在Run键下创建启动项"
+    },
+    {
+      "category": "文件操作",
+      "finding": "AppData目录文件读写",
+      "severity": "信息",
+      "details": "访问用户配置目录"
+    }
+  ],
+  "recommendations": [
+    "进一步分析网络通信数据包",
+    "检查注册表操作的具体内容",
+    "验证文件操作的合法性"
+  ]
+}
