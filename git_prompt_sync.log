@@ -2,3 +2,313 @@
   in "C:\Users\ADMINI~1\AppData\Local\Temp\tmpz20leqgi.yaml", line 9, column 19
 expected escape sequence of 8 hexadecimal numbers, but found 's'
   in "C:\Users\ADMINI~1\AppData\Local\Temp\tmpz20leqgi.yaml", line 9, column 24
+2025-08-31 11:47:05,378 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 11:47:05,379 - __main__ - INFO - 同步 prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 11:47:05,404 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 11:47:06,903 - __main__ - WARNING - HTTP下载失败: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/minshengzhong3-byte/automation-prompt-sets/contents/prompt_sets/core/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)')))
+2025-08-31 11:47:06,903 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/core/
+2025-08-31 11:47:06,903 - __main__ - ERROR - 同步失败: prompt_sets/core/
+2025-08-31 11:47:06,903 - __main__ - INFO - 同步 prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 11:47:06,925 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 11:47:08,499 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:08,499 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/identities/
+2025-08-31 11:47:08,500 - __main__ - ERROR - 同步失败: prompt_sets/identities/
+2025-08-31 11:47:08,500 - __main__ - INFO - 同步 prompt_sets/code_analysis/ -> .trae/rules/prompt_sets/code_analysis/ (优先级: medium)
+2025-08-31 11:47:08,522 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/code_analysis' already exists and is not an empty directory.
+
+2025-08-31 11:47:10,641 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:10,642 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/code_analysis/
+2025-08-31 11:47:10,642 - __main__ - ERROR - 同步失败: prompt_sets/code_analysis/
+2025-08-31 11:47:10,642 - __main__ - INFO - 同步 prompt_sets/program_development/ -> .trae/rules/prompt_sets/program_development/ (优先级: medium)
+2025-08-31 11:47:10,666 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/program_development' already exists and is not an empty directory.
+
+2025-08-31 11:47:12,289 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:12,289 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/program_development/
+2025-08-31 11:47:12,289 - __main__ - ERROR - 同步失败: prompt_sets/program_development/
+2025-08-31 11:47:12,289 - __main__ - INFO - 同步 prompt_sets/web_development/ -> .trae/rules/prompt_sets/web_development/ (优先级: medium)
+2025-08-31 11:47:12,313 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/web_development' already exists and is not an empty directory.
+
+2025-08-31 11:47:15,685 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:15,685 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/web_development/
+2025-08-31 11:47:15,686 - __main__ - ERROR - 同步失败: prompt_sets/web_development/
+2025-08-31 11:47:15,686 - __main__ - INFO - 同步 prompt_sets/tool_development/ -> .trae/rules/prompt_sets/tool_development/ (优先级: medium)
+2025-08-31 11:47:15,708 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/tool_development' already exists and is not an empty directory.
+
+2025-08-31 11:47:17,651 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:17,651 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/tool_development/
+2025-08-31 11:47:17,651 - __main__ - ERROR - 同步失败: prompt_sets/tool_development/
+2025-08-31 11:47:17,651 - __main__ - INFO - 同步 prompt_sets/static_review/ -> .trae/rules/prompt_sets/static_review/ (优先级: medium)
+2025-08-31 11:47:17,674 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/static_review' already exists and is not an empty directory.
+
+2025-08-31 11:47:19,222 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:19,222 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/static_review/
+2025-08-31 11:47:19,222 - __main__ - ERROR - 同步失败: prompt_sets/static_review/
+2025-08-31 11:47:19,222 - __main__ - INFO - 同步 prompt_sets/pattern_matching/ -> .trae/rules/prompt_sets/pattern_matching/ (优先级: medium)
+2025-08-31 11:47:19,246 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/pattern_matching' already exists and is not an empty directory.
+
+2025-08-31 11:47:21,205 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:21,205 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/pattern_matching/
+2025-08-31 11:47:21,205 - __main__ - ERROR - 同步失败: prompt_sets/pattern_matching/
+2025-08-31 11:47:21,205 - __main__ - INFO - 同步 prompt_sets/reverse_engineering/ -> .trae/rules/prompt_sets/reverse_engineering/ (优先级: medium)
+2025-08-31 11:47:21,228 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/reverse_engineering' already exists and is not an empty directory.
+
+2025-08-31 11:47:23,071 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:23,071 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/reverse_engineering/
+2025-08-31 11:47:23,071 - __main__ - ERROR - 同步失败: prompt_sets/reverse_engineering/
+2025-08-31 11:47:23,072 - __main__ - INFO - 同步 prompt_sets/general_research/ -> .trae/rules/prompt_sets/general_research/ (优先级: medium)
+2025-08-31 11:47:23,095 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/general_research' already exists and is not an empty directory.
+
+2025-08-31 11:47:25,035 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:47:25,035 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/general_research/
+2025-08-31 11:47:25,035 - __main__ - ERROR - 同步失败: prompt_sets/general_research/
+2025-08-31 11:47:25,035 - __main__ - INFO - 同步完成: 0/10 (0.0%)
+2025-08-31 11:47:25,039 - __main__ - WARNING - 同步任务部分失败
+2025-08-31 11:48:10,086 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 11:48:10,086 - __main__ - INFO - 同步 prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 11:48:10,109 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 11:48:11,673 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:11,673 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/core/
+2025-08-31 11:48:11,673 - __main__ - ERROR - 同步失败: prompt_sets/core/
+2025-08-31 11:48:11,673 - __main__ - INFO - 同步 prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 11:48:11,696 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 11:48:13,189 - __main__ - WARNING - HTTP下载失败: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/minshengzhong3-byte/automation-prompt-sets/contents/prompt_sets/identities/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)')))
+2025-08-31 11:48:13,190 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/identities/
+2025-08-31 11:48:13,190 - __main__ - ERROR - 同步失败: prompt_sets/identities/
+2025-08-31 11:48:13,190 - __main__ - INFO - 同步 prompt_sets/code_analysis/ -> .trae/rules/prompt_sets/code_analysis/ (优先级: medium)
+2025-08-31 11:48:13,214 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/code_analysis' already exists and is not an empty directory.
+
+2025-08-31 11:48:14,664 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:14,664 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/code_analysis/
+2025-08-31 11:48:14,664 - __main__ - ERROR - 同步失败: prompt_sets/code_analysis/
+2025-08-31 11:48:14,664 - __main__ - INFO - 同步 prompt_sets/program_development/ -> .trae/rules/prompt_sets/program_development/ (优先级: medium)
+2025-08-31 11:48:14,688 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/program_development' already exists and is not an empty directory.
+
+2025-08-31 11:48:17,515 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:17,515 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/program_development/
+2025-08-31 11:48:17,515 - __main__ - ERROR - 同步失败: prompt_sets/program_development/
+2025-08-31 11:48:17,515 - __main__ - INFO - 同步 prompt_sets/web_development/ -> .trae/rules/prompt_sets/web_development/ (优先级: medium)
+2025-08-31 11:48:17,541 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/web_development' already exists and is not an empty directory.
+
+2025-08-31 11:48:19,248 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:19,248 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/web_development/
+2025-08-31 11:48:19,248 - __main__ - ERROR - 同步失败: prompt_sets/web_development/
+2025-08-31 11:48:19,248 - __main__ - INFO - 同步 prompt_sets/tool_development/ -> .trae/rules/prompt_sets/tool_development/ (优先级: medium)
+2025-08-31 11:48:19,271 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/tool_development' already exists and is not an empty directory.
+
+2025-08-31 11:48:21,131 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:21,131 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/tool_development/
+2025-08-31 11:48:21,131 - __main__ - ERROR - 同步失败: prompt_sets/tool_development/
+2025-08-31 11:48:21,131 - __main__ - INFO - 同步 prompt_sets/static_review/ -> .trae/rules/prompt_sets/static_review/ (优先级: medium)
+2025-08-31 11:48:21,153 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/static_review' already exists and is not an empty directory.
+
+2025-08-31 11:48:23,178 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:23,179 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/static_review/
+2025-08-31 11:48:23,179 - __main__ - ERROR - 同步失败: prompt_sets/static_review/
+2025-08-31 11:48:23,179 - __main__ - INFO - 同步 prompt_sets/pattern_matching/ -> .trae/rules/prompt_sets/pattern_matching/ (优先级: medium)
+2025-08-31 11:48:23,201 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/pattern_matching' already exists and is not an empty directory.
+
+2025-08-31 11:48:26,602 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:26,603 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/pattern_matching/
+2025-08-31 11:48:26,603 - __main__ - ERROR - 同步失败: prompt_sets/pattern_matching/
+2025-08-31 11:48:26,603 - __main__ - INFO - 同步 prompt_sets/reverse_engineering/ -> .trae/rules/prompt_sets/reverse_engineering/ (优先级: medium)
+2025-08-31 11:48:26,624 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/reverse_engineering' already exists and is not an empty directory.
+
+2025-08-31 11:48:28,626 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:28,626 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/reverse_engineering/
+2025-08-31 11:48:28,626 - __main__ - ERROR - 同步失败: prompt_sets/reverse_engineering/
+2025-08-31 11:48:28,626 - __main__ - INFO - 同步 prompt_sets/general_research/ -> .trae/rules/prompt_sets/general_research/ (优先级: medium)
+2025-08-31 11:48:28,649 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/general_research' already exists and is not an empty directory.
+
+2025-08-31 11:48:31,502 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:48:31,502 - __main__ - ERROR - 所有同步方法都失败: prompt_sets/general_research/
+2025-08-31 11:48:31,502 - __main__ - ERROR - 同步失败: prompt_sets/general_research/
+2025-08-31 11:48:31,502 - __main__ - INFO - 同步完成: 0/10 (0.0%)
+2025-08-31 11:48:31,505 - __main__ - WARNING - 同步任务部分失败
+2025-08-31 11:50:51,181 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 11:50:51,182 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 11:50:51,228 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 11:50:57,171 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 11:50:59,124 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 11:50:59,124 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 11:50:59,124 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 11:50:59,148 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 11:51:03,950 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 11:51:06,251 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 11:51:07,604 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 11:51:07,604 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 11:51:07,604 - __main__ - INFO - 同步 trae_rules/prompt_sets/code_analysis/ -> .trae/rules/prompt_sets/code_analysis/ (优先级: medium)
+2025-08-31 11:51:07,626 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/code_analysis' already exists and is not an empty directory.
+
+2025-08-31 11:51:10,345 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:10,345 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/code_analysis/
+2025-08-31 11:51:10,345 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/code_analysis/
+2025-08-31 11:51:10,345 - __main__ - INFO - 同步 trae_rules/prompt_sets/program_development/ -> .trae/rules/prompt_sets/program_development/ (优先级: medium)
+2025-08-31 11:51:10,368 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/program_development' already exists and is not an empty directory.
+
+2025-08-31 11:51:12,840 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:12,841 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/program_development/
+2025-08-31 11:51:12,841 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/program_development/
+2025-08-31 11:51:12,841 - __main__ - INFO - 同步 trae_rules/prompt_sets/web_development/ -> .trae/rules/prompt_sets/web_development/ (优先级: medium)
+2025-08-31 11:51:12,865 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/web_development' already exists and is not an empty directory.
+
+2025-08-31 11:51:16,352 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:16,352 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/web_development/
+2025-08-31 11:51:16,352 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/web_development/
+2025-08-31 11:51:16,352 - __main__ - INFO - 同步 trae_rules/prompt_sets/tool_development/ -> .trae/rules/prompt_sets/tool_development/ (优先级: medium)
+2025-08-31 11:51:16,373 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/tool_development' already exists and is not an empty directory.
+
+2025-08-31 11:51:22,178 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:22,178 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/tool_development/
+2025-08-31 11:51:22,178 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/tool_development/
+2025-08-31 11:51:22,178 - __main__ - INFO - 同步 trae_rules/prompt_sets/static_review/ -> .trae/rules/prompt_sets/static_review/ (优先级: medium)
+2025-08-31 11:51:22,200 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/static_review' already exists and is not an empty directory.
+
+2025-08-31 11:51:25,228 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:25,228 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/static_review/
+2025-08-31 11:51:25,228 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/static_review/
+2025-08-31 11:51:25,228 - __main__ - INFO - 同步 trae_rules/prompt_sets/pattern_matching/ -> .trae/rules/prompt_sets/pattern_matching/ (优先级: medium)
+2025-08-31 11:51:25,253 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/pattern_matching' already exists and is not an empty directory.
+
+2025-08-31 11:51:27,558 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:27,558 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/pattern_matching/
+2025-08-31 11:51:27,559 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/pattern_matching/
+2025-08-31 11:51:27,559 - __main__ - INFO - 同步 trae_rules/prompt_sets/reverse_engineering/ -> .trae/rules/prompt_sets/reverse_engineering/ (优先级: medium)
+2025-08-31 11:51:27,582 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/reverse_engineering' already exists and is not an empty directory.
+
+2025-08-31 11:51:30,944 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:30,944 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/reverse_engineering/
+2025-08-31 11:51:30,944 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/reverse_engineering/
+2025-08-31 11:51:30,944 - __main__ - INFO - 同步 trae_rules/prompt_sets/general_research/ -> .trae/rules/prompt_sets/general_research/ (优先级: medium)
+2025-08-31 11:51:30,967 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/general_research' already exists and is not an empty directory.
+
+2025-08-31 11:51:32,674 - __main__ - WARNING - 获取文件列表失败: 404
+2025-08-31 11:51:32,675 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/general_research/
+2025-08-31 11:51:32,675 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/general_research/
+2025-08-31 11:51:32,675 - __main__ - INFO - 同步完成: 2/10 (20.0%)
+2025-08-31 11:51:32,681 - __main__ - WARNING - 同步任务部分失败
+2025-08-31 11:53:18,709 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 11:53:18,709 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 11:53:18,732 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 11:53:22,273 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 11:53:23,690 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 11:53:23,690 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 11:53:23,690 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 11:53:23,716 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 11:53:26,500 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 11:53:27,413 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 11:53:28,922 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 11:53:28,922 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 11:53:28,922 - __main__ - INFO - 同步完成: 2/2 (100.0%)
+2025-08-31 11:53:28,923 - __main__ - INFO - 同步任务完成
+2025-08-31 11:54:41,480 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 11:54:41,480 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 11:54:41,526 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 11:54:44,710 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 11:54:46,415 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 11:54:46,415 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 11:54:46,415 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 11:54:46,443 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 11:54:49,174 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 11:54:50,186 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 11:54:51,204 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 11:54:51,204 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 11:54:51,204 - __main__ - INFO - 同步完成: 2/2 (100.0%)
+2025-08-31 11:54:51,205 - __main__ - INFO - 同步任务完成
+2025-08-31 12:09:28,892 - __main__ - INFO - 未检测到阶段变化，跳过同步
+2025-08-31 12:10:26,705 - __main__ - INFO - 首次运行，需要初始同步
+2025-08-31 12:10:26,705 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 12:10:26,705 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 12:10:26,731 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 12:10:36,172 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 12:10:39,105 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 12:10:39,105 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 12:10:39,105 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 12:10:39,134 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 12:10:43,450 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 12:10:45,168 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 12:10:47,612 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 12:10:47,613 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 12:10:47,613 - __main__ - INFO - 同步完成: 2/2 (100.0%)
+2025-08-31 12:10:47,615 - __main__ - INFO - 同步任务完成
+2025-08-31 12:11:37,186 - __main__ - INFO - 检测到阶段变化: None -> program_development
+2025-08-31 12:11:37,186 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 12:11:37,187 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 12:11:37,222 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 12:11:43,542 - __main__ - WARNING - HTTP下载失败: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/minshengzhong3-byte/automation-prompt-sets/contents/trae_rules/prompt_sets/core/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)')))
+2025-08-31 12:11:43,543 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/core/
+2025-08-31 12:11:43,543 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/core/
+2025-08-31 12:11:43,543 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 12:11:43,575 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 12:11:56,840 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 12:11:59,166 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 12:12:01,791 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 12:12:01,791 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 12:12:01,792 - __main__ - INFO - 同步完成: 1/2 (50.0%)
+2025-08-31 12:12:01,794 - __main__ - WARNING - 同步任务部分失败
+2025-08-31 12:12:54,187 - __main__ - INFO - 检测到阶段变化: None -> program_development
+2025-08-31 12:12:54,187 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 12:12:54,187 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 12:12:54,209 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 12:13:02,397 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 12:13:04,508 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 12:13:04,509 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 12:13:04,509 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 12:13:04,537 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 12:13:08,915 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 12:13:10,151 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 12:13:12,039 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 12:13:12,039 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 12:13:12,039 - __main__ - INFO - 同步完成: 2/2 (100.0%)
+2025-08-31 12:13:12,041 - __main__ - INFO - 同步任务完成
+2025-08-31 12:13:33,635 - __main__ - INFO - 检测到阶段变化: None -> program_development
+2025-08-31 12:13:33,636 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 12:13:33,636 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 12:13:33,661 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 12:13:47,662 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 12:13:54,758 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 12:13:54,759 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 12:13:54,759 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 12:13:54,783 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 12:14:10,123 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 12:14:13,780 - __main__ - WARNING - HTTP下载失败: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /minshengzhong3-byte/automation-prompt-sets/master/trae_rules/prompt_sets/identities/developer.md (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)')))
+2025-08-31 12:14:13,780 - __main__ - ERROR - 所有同步方法都失败: trae_rules/prompt_sets/identities/
+2025-08-31 12:14:13,780 - __main__ - ERROR - 同步失败: trae_rules/prompt_sets/identities/
+2025-08-31 12:14:13,780 - __main__ - INFO - 同步完成: 1/2 (50.0%)
+2025-08-31 12:14:13,782 - __main__ - WARNING - 同步任务部分失败
+2025-08-31 12:14:58,136 - __main__ - INFO - 检测到阶段变化: program_development (基于对话识别) -> program_development
+2025-08-31 12:14:58,136 - __main__ - INFO - 开始同步GitHub提示词集...
+2025-08-31 12:14:58,136 - __main__ - INFO - 同步 trae_rules/prompt_sets/core/ -> .trae/rules/prompt_sets/core/ (优先级: highest)
+2025-08-31 12:14:58,161 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/core' already exists and is not an empty directory.
+
+2025-08-31 12:15:05,151 - __main__ - INFO - 下载成功: error_handling.md
+2025-08-31 12:15:08,730 - __main__ - INFO - 下载成功: framework.md
+2025-08-31 12:15:08,730 - __main__ - INFO - HTTP下载完成: 2/2 (100.0%)
+2025-08-31 12:15:08,730 - __main__ - INFO - 同步 trae_rules/prompt_sets/identities/ -> .trae/rules/prompt_sets/identities/ (优先级: high)
+2025-08-31 12:15:08,754 - __main__ - WARNING - Git clone失败: fatal: destination path '.trae/rules/prompt_sets/identities' already exists and is not an empty directory.
+
+2025-08-31 12:15:16,537 - __main__ - INFO - 下载成功: architect.md
+2025-08-31 12:15:18,564 - __main__ - INFO - 下载成功: developer.md
+2025-08-31 12:15:19,570 - __main__ - INFO - 下载成功: qa_tester.md
+2025-08-31 12:15:19,570 - __main__ - INFO - HTTP下载完成: 3/3 (100.0%)
+2025-08-31 12:15:19,570 - __main__ - INFO - 同步完成: 2/2 (100.0%)
+2025-08-31 12:15:19,572 - __main__ - INFO - 同步任务完成
+2025-08-31 12:16:18,913 - __main__ - INFO - 未检测到阶段变化，跳过同步
+2025-08-31 12:16:31,093 - __main__ - INFO - 未检测到阶段变化，跳过同步

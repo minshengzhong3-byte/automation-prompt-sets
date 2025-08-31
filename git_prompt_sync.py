@@ -10,6 +10,7 @@ import yaml
 import subprocess
 import requests
 import shutil
+import json
 import logging
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -84,8 +85,8 @@ class GitPromptSync:
             if self._try_git_sync(github_path, local_path):
                 return True
             
-            # 如果git失败，使用curl下载
-            if self._try_curl_download(github_path, local_path):
+            # 如果git失败，使用HTTP下载
+            if self._try_http_download(github_path, local_path):
                 return True
             
             logger.error(f"所有同步方法都失败: {github_path}")
@@ -146,8 +147,8 @@ class GitPromptSync:
             logger.warning(f"Git同步失败: {e}")
             return False
     
-    def _try_curl_download(self, github_path: str, local_path: str) -> bool:
-        """使用curl下载文件"""
+    def _try_http_download(self, github_path: str, local_path: str) -> bool:
+        """使用HTTP下载文件"""
         try:
             base_url = self.repo_config.get('base_url')
             if not base_url:
@@ -188,12 +189,12 @@ class GitPromptSync:
                         logger.warning(f"下载失败: {file_name}")
             
             success_rate = (success_count / total_count) * 100 if total_count > 0 else 0
-            logger.info(f"CURL下载完成: {success_count}/{total_count} ({success_rate:.1f}%)")
+            logger.info(f"HTTP下载完成: {success_count}/{total_count} ({success_rate:.1f}%)")
             
             return success_count > 0
             
         except Exception as e:
-            logger.warning(f"CURL下载失败: {e}")
+            logger.warning(f"HTTP下载失败: {e}")
             return False
     
     def validate_sync(self) -> Dict:
@@ -279,10 +280,123 @@ class GitPromptSync:
         
         return report
 
+def check_stage_change() -> bool:
+    """检查阶段变化，返回是否需要同步"""
+    try:
+        # 检查project_rules.md中的当前阶段
+        project_rules_path = ".trae/rules/project_rules.md"
+        if not os.path.exists(project_rules_path):
+            logger.info("project_rules.md不存在，需要初始同步")
+            return True
+        
+        # 读取当前阶段信息
+        with open(project_rules_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 解析当前阶段 - 从核心配置中查找
+        current_stage = None
+        lines = content.split('\n')
+        for i, line in enumerate(lines):
+            if "当前状态:" in line and i + 1 < len(lines):
+                # 查找下一行的模式信息
+                next_line = lines[i + 1].strip()
+                if "模式:" in next_line:
+                    # 提取模式信息，格式如: "模式: program_development (基于对话识别)"
+                    mode_part = next_line.split(':', 1)[1].strip()
+                    # 提取模式名称（去掉括号内的描述）
+                    if '(' in mode_part:
+                        current_stage = mode_part.split('(', 1)[0].strip()
+                    else:
+                        current_stage = mode_part
+                    break
+        
+        # 检查last_status.json中的上次阶段
+        last_status_path = ".trae/rules/last_status.json"
+        if os.path.exists(last_status_path):
+            with open(last_status_path, 'r', encoding='utf-8') as f:
+                last_status = json.load(f)
+            last_stage = last_status.get('模式')
+            
+            # 对last_stage应用相同的解析逻辑（去掉括号内的描述）
+            if '(' in last_stage:
+                last_stage = last_stage.split('(', 1)[0].strip()
+            
+            # 比较阶段变化
+            if current_stage != last_stage:
+                logger.info(f"检测到阶段变化: {last_stage} -> {current_stage}")
+                return True
+        else:
+            # 如果last_status.json不存在，需要创建并触发同步
+            logger.info("首次运行，需要初始同步")
+            return True
+        
+        return False
+        
+    except Exception as e:
+        logger.warning(f"检查阶段变化失败: {e}")
+        return True
+
+def update_last_status():
+    """更新最后状态记录"""
+    try:
+        project_rules_path = ".trae/rules/project_rules.md"
+        if not os.path.exists(project_rules_path):
+            return
+        
+        # 读取当前状态
+        with open(project_rules_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        status = {}
+        lines = content.split('\n')
+        
+        # 只提取核心配置部分的状态信息
+        in_core_config = False
+        for line in lines:
+            line = line.strip()
+            
+            # 检测核心配置部分开始
+            if "当前状态:" in line:
+                in_core_config = True
+                continue
+            
+            # 检测核心配置部分结束
+            if in_core_config and line.startswith('##') and not line.startswith('###'):
+                break
+            
+            # 在核心配置部分中提取键值对（Markdown列表格式）
+            if in_core_config and line.startswith('-') and ':' in line:
+                # 清理Markdown格式，去掉列表符号
+                clean_line = line[1:].strip().replace('**', '').replace('`', '')
+                if ':' in clean_line:
+                    key_value = clean_line.split(':', 1)
+                    if len(key_value) == 2:
+                        key = key_value[0].strip()
+                        value = key_value[1].strip()
+                        # 只保留重要的状态信息
+                        if key in ['模式', '身份', '进度', '任务']:
+                            status[key] = value
+        
+        # 保存状态
+        last_status_path = ".trae/rules/last_status.json"
+        os.makedirs(os.path.dirname(last_status_path), exist_ok=True)
+        with open(last_status_path, 'w', encoding='utf-8') as f:
+            json.dump(status, f, ensure_ascii=False, indent=2)
+            
+    except Exception as e:
+        logger.warning(f"更新状态记录失败: {e}")
+
 def main():
     """主函数"""
     try:
         sync = GitPromptSync()
+        
+        # 检查阶段变化触发条件
+        should_sync = check_stage_change()
+        
+        if not should_sync:
+            logger.info("未检测到阶段变化，跳过同步")
+            return 0
         
         # 执行同步
         success = sync.sync_all_prompts()
@@ -294,6 +408,9 @@ def main():
         # 保存报告
         with open('sync_report.md', 'w', encoding='utf-8') as f:
             f.write(report)
+        
+        # 更新状态记录
+        update_last_status()
         
         if success:
             logger.info("同步任务完成")

@@ -61,7 +61,7 @@
 ## 📁 文件结构
 
 ```
-trae_rules/
+.trae/rules/
 ├── prompt_sets/                 # 提示词集目录
 │   ├── core/                    # 核心基础提示词
 │   ├── identities/              # 身份专属提示词
@@ -87,11 +87,11 @@ user_rules.yaml                # 用户配置规则
 ```yaml
 prompt_collection:
   target_directories:
-    - "trae_rules/prompt_sets/core/"
-    - "trae_rules/prompt_sets/identities/"
-    - "trae_rules/prompt_sets/program_development/"
-    - "trae_rules/prompt_sets/web_development/"
-    - "trae_rules/prompt_sets/tool_development/"
+    - ".trae/rules/prompt_sets/core/"
+- ".trae/rules/prompt_sets/identities/"
+- ".trae/rules/prompt_sets/program_development/"
+- ".trae/rules/prompt_sets/web_development/"
+- ".trae/rules/prompt_sets/tool_development/"
 ```
 
 #### 2. 开发类型定义
@@ -288,7 +288,7 @@ else:
 ## 📝 自定义扩展
 
 ### 添加新的开发类型
-1. 在 `trae_rules/prompt_sets/` 创建新目录
+1. 在 `.trae/rules/prompt_sets/` 创建新目录
 2. 创建相应的阶段文件:
    - `framework.md` - 框架定义
    - `requirements_analysis.md` - 需求分析
@@ -349,19 +349,19 @@ git_prompt_collection:
   
   target_mapping:
     - github_path: "prompt_sets/program_development"
-      local_path: "trae_rules/prompt_sets/program_development"
+      local_path: ".trae/rules/prompt_sets/program_development"
       priority: "high"
     - github_path: "prompt_sets/web_development"
-      local_path: "trae_rules/prompt_sets/web_development"
+      local_path: ".trae/rules/prompt_sets/web_development"
       priority: "medium"
     - github_path: "prompt_sets/tool_development"
-      local_path: "trae_rules/prompt_sets/tool_development"
+      local_path: ".trae/rules/prompt_sets/tool_development"
       priority: "medium"
     - github_path: "prompt_sets/core"
-      local_path: "trae_rules/prompt_sets/core"
+      local_path: ".trae/rules/prompt_sets/core"
       priority: "high"
     - github_path: "prompt_sets/identities"
-      local_path: "trae_rules/prompt_sets/identities"
+      local_path: ".trae/rules/prompt_sets/identities"
       priority: "high"
 
   pull_strategy:
@@ -543,7 +543,7 @@ pip install -r requirements-dev.txt
 
 ### 添加新的提示词集
 
-1. 在 `trae_rules/prompt_sets/` 创建新目录
+1. 在 `.trae/rules/prompt_sets/` 创建新目录
 2. 创建标准阶段文件：
    - `framework.md` - 框架定义
    - `requirements_analysis.md` - 需求分析

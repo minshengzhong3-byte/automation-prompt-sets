@@ -59,23 +59,23 @@ git_prompt_collection:
 ```yaml
 target_mapping:
   - github_path: "prompt_sets/program_development"
-    local_path: "trae_rules/prompt_sets/program_development"
+    local_path: ".trae/rules/prompt_sets/program_development"
     priority: "high"                # 优先级：high/medium/low
   
   - github_path: "prompt_sets/web_development"
-    local_path: "trae_rules/prompt_sets/web_development"
+    local_path: ".trae/rules/prompt_sets/web_development"
     priority: "medium"
   
   - github_path: "prompt_sets/tool_development"
-    local_path: "trae_rules/prompt_sets/tool_development"
+    local_path: ".trae/rules/prompt_sets/tool_development"
     priority: "medium"
   
   - github_path: "prompt_sets/core"
-    local_path: "trae_rules/prompt_sets/core"
+    local_path: ".trae/rules/prompt_sets/core"
     priority: "high"
   
   - github_path: "prompt_sets/identities"
-    local_path: "trae_rules/prompt_sets/identities"
+    local_path: ".trae/rules/prompt_sets/identities"
     priority: "high"
 ```
 
@@ -241,10 +241,10 @@ curl -I https://api.github.com
 #### 2. 权限问题
 ```bash
 # 检查文件权限
-ls -la trae_rules/prompt_sets/
+ls -la .trae/rules/prompt_sets/
 
 # 修复权限
-chmod -R 755 trae_rules/
+chmod -R 755 .trae/rules/
 ```
 
 #### 3. 依赖问题
@@ -260,7 +260,7 @@ pip install pyyaml requests
 python -c "import yaml; yaml.safe_load(open('user_rules.yaml'))"
 
 # 检查配置路径
-ls -la trae_rules/prompt_sets/
+ls -la .trae/rules/prompt_sets/
 ```
 
 ### 日志分析
@@ -323,7 +323,7 @@ cat sync_report.md
 find . -name "sync_report.md" -mtime -1
 
 # 监控磁盘使用
-du -sh trae_rules/prompt_sets/
+du -sh .trae/rules/prompt_sets/
 ```
 
 ### 告警配置
@@ -365,10 +365,10 @@ python git_prompt_sync.py --force
 ### 回滚机制
 ```bash
 # 备份当前提示词集
-cp -r trae_rules/prompt_sets/ trae_rules/prompt_sets_backup_$(date +%Y%m%d_%H%M%S)
+cp -r .trae/rules/prompt_sets/ .trae/rules/prompt_sets_backup_$(date +%Y%m%d_%H%M%S)
 
 # 恢复备份
-cp -r trae_rules/prompt_sets_backup_20230801_120000/ trae_rules/prompt_sets/
+cp -r .trae/rules/prompt_sets_backup_20230801_120000/ .trae/rules/prompt_sets/
 ```
 
 ## 🎯 最佳实践
