@@ -187,9 +187,9 @@ git_prompt_collection:
   # GitHub仓库配置
   github_repository:
     owner: "minshengzhong3-byte"
-    repo: "automated-prompt-sets"
-    branch: "main"
-    base_url: "https://raw.githubusercontent.com/minshengzhong3-byte/automated-prompt-sets/main"
+    repo: "automation-prompt-sets"
+    branch: "master"
+    base_url: "https://raw.githubusercontent.com/minshengzhong3-byte/automation-prompt-sets/master"
   
   # 拉取触发条件
   pull_triggers:
